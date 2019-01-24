@@ -1,0 +1,19 @@
+label,input {
+    position: relative;
+    left: 1100px;
+    float: left;
+    color: blue;
+    font-weight: bold;
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+}
+
+.images {
+    margin: 10px;
+}
