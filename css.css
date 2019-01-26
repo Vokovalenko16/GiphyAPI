@@ -1,9 +1,18 @@
 label,input {
     position: relative;
+    top: -700px;
     left: 1100px;
-    float: left;
     color: blue;
     font-weight: bold;
+}
+
+body {
+    background-image: url("https://hdbackgroundspot.com//storage/upload/cool-background-designs/cool-background-designs-26.jpg")
+
+}
+#add-answer {
+    position: relative;
+    left: 1200px;
 }
 
 button {
@@ -11,9 +20,47 @@ button {
     color: white;
     width: 100px;
     height: 40px;
-    margin: 5px;
 }
 
-.images {
-    margin: 10px;
+.col-sm-3 {
+    height: 200px;
 }
+
+img {
+    width: 230px;
+    height: 165px;
+}
+
+.animalZ {
+    border: 3px solid white;
+}
+
+@media only screen and (max-width: 1140px)
+{
+    label,input {
+        position: relative;
+        top: -700px;
+        left: 820px;
+        color: blue;
+        font-weight: bold;
+    }
+    #add-answer {
+        position: relative;
+        left: 920px;
+    }
+}
+@media only screen and (max-width: 768px)
+{
+    label,input {
+        position: relative;
+        top: -700px;
+        left: 460px;
+        color: blue;
+        font-weight: bold;
+    }
+    #add-answer {
+        position: relative;
+        left: 560px;
+    }
+}
+/* how do i move the label and input dynamic with the lengths the screen changes. */
