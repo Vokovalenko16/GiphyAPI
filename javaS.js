@@ -14,7 +14,6 @@ function displayImage() {
 
     $.ajax({
       url: apiURL,
-      method: "GET"
     }).then(function(response) {
       console.log(response)
     
@@ -69,20 +68,20 @@ renderButtons();
 
 //function makes the GIF stop if the specific GIF is clicked
 function stopGIF() {
-
-if  (Pressed === 0 || (Pressed%2) ===0 ) {
+  let reg = /.*[^_s]\.gif$/g
+  
   var urlLINK = $(this).attr("src")
-  var NEW = urlLINK.replace(".gif","_s.gif")
-  $(this).attr("src", NEW) 
-};
-if ((Pressed%2) !=0) {
-  var urlLINK2 = $(this).attr("src")
-  var NEW2 = urlLINK2.replace("_s.gif",".gif")
-  $(this).attr("src", NEW2) 
-}
-Pressed++;
 
-}
+  if (reg.test(urlLINK) === true){
+    var NEW = urlLINK.replace(".gif","_s.gif")
+    $(this).attr("src", NEW) 
+  }
+
+  else if (reg.test(urlLINK) === false) {
+  var NEW = urlLINK.replace("_s.gif",".gif")
+  $(this).attr("src", NEW) 
+  }
+};
 
 
 //function makes the GIF stop if the specific GIF is clicked
